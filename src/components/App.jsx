@@ -1,16 +1,14 @@
+import { GlobalStyle } from './BasicStyles/GlobalStyle';
+import { Layout } from './Layout/Layout';
+
+import cars from '../cars.json';
+import { CarList } from './Cards/CarList';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Layout>
+      <CarList cars={cars} />
+      <GlobalStyle />
+    </Layout>
   );
 };
